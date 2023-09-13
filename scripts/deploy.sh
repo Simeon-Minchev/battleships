@@ -5,4 +5,4 @@ yarn
 npm run build
 
 # Sync build output to S3 bucket
-aws s3 sync build/ arn:aws:s3:::simeon-minchev-battleships
+aws s3 sync build/ s3://simeon-minchev-battleships
