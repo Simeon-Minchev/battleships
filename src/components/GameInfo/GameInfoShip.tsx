@@ -1,5 +1,5 @@
-import circle from 'assets/circle.png';
-import hitSmall from 'assets/hit-small.png';
+import circle from '../../assets/circle.png';
+import hitSmall from '../../assets/hit-small-shape.png';
 
 type Props = {
   image: string;

@@ -1,7 +1,7 @@
 import { useGameBoardContext } from "./GameBoardProvider";
 import { ICell } from "./types";
-import hit from 'assets/hit.png'
-import miss from 'assets/miss.png'
+import hitShape from '../../assets/hit-shape.png'
+import missShape from '../../assets/miss-shape.png'
 
 type Props = {
   rowIndex: number;
@@ -18,7 +18,7 @@ const GameBoardCell = ({rowIndex, columnIndex, cell}: Props) => {
 
   return (
     <div className="border cursor-pointer w-10 h-10" onClick={onCellClickHandler}>
-      {cell.isTicked && (cell.shipType ? <img src={hit} /> : <img src={miss} />)}
+      {cell.isTicked && (cell.shipType ? <img src={hitShape} /> : <img src={missShape} />)}
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import { useGameInfoContext } from './GameInfoProvider';
 import GameInfoShip from './GameInfoShip';
-import carrierShape from 'assets/carrier-shape.png';
-import battleshipShape from 'assets/battleship-shape.png';
-import cruiserShape from 'assets/cruiser-shape.png';
-import submarineShape from 'assets/submarine-shape.png';
-import destroyerShape from 'assets/destroyer-shape.png';
+import carrierShape from '../../assets/carrier-shape.png';
+import battleshipShape from '../../assets/battleship-shape.png';
+import cruiserShape from '../../assets/cruiser-shape.png';
+import submarineShape from '../../assets/submarine-shape.png';
+import destroyerShape from '../../assets/destroyer-shape.png';
 import { shipsHealth } from 'constants';
 
 const GameInfoShips = () => {
