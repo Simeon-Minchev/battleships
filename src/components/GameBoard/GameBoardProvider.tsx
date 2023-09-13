@@ -21,7 +21,7 @@ type Props = {
 
 export const GameBoardProvider = ({children}: Props) => {
   const [boardCells, setBoardCells] = useState(generateBoardCells());
-  const { hitShip } = useGameInfoContext();
+  const { hitShip, isGameFinished } = useGameInfoContext();
 
   const placeShipsOnBoardHandler = (shipsPositions: IShipPosition[]) => {
     shipsPositions.forEach(({ship, positions}) => {
@@ -36,10 +36,9 @@ export const GameBoardProvider = ({children}: Props) => {
   const onCellClickHandler = (rowIndex: number, columnIndex: number) => {
     const clickedCell = boardCells[rowIndex][columnIndex];
 
-    if (clickedCell.isTicked) {
+    if (clickedCell.isTicked || isGameFinished) {
       return;
     }
-
 
     clickedCell.shipType && hitShip(clickedCell.shipType)
     clickedCell.isTicked = true;

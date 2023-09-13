@@ -3,7 +3,7 @@ import { useGameInfoContext } from "./GameInfoProvider";
 
 const GameInfoScoreBoard = () => {
   const {
-    player1Score: { points },
+    player1Score: { points,  },
   } = useGameInfoContext();
 
   return (
