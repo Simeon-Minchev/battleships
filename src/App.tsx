@@ -1,9 +1,12 @@
-function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+import GameBoard from './components/GameBoard/GameBoard';
+import { GameBoardProvider } from './components/GameBoard/GameBoardProvider';
 
-export default App
+const App = () => {
+  return (
+    <GameBoardProvider>
+      <GameBoard />
+    </GameBoardProvider>
+  );
+};
+
+export default App;
