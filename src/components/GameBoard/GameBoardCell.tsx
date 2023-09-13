@@ -1,7 +1,7 @@
 import { useGameBoardContext } from "./GameBoardProvider";
 import { ICell } from "./types";
-import hitShape from '../../assets/hit-shape.png'
-import missShape from '../../assets/miss-shape.png'
+import hitShape from 'assets/hit-shape.png'
+import missShape from 'assets/miss-shape.png'
 
 type Props = {
   rowIndex: number;
