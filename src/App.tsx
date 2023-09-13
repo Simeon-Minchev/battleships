@@ -1,11 +1,18 @@
+import GameInfo from 'components/GameInfo/GameInfo';
 import GameBoard from './components/GameBoard/GameBoard';
-import { GameBoardProvider } from './components/GameBoard/GameBoardProvider';
+import { GameBoardProvider } from 'components/GameBoard/GameBoardProvider';
+import { GameInfoProvider } from 'components/GameInfo/GameInfoProvider';
 
 const App = () => {
   return (
-    <GameBoardProvider>
-      <GameBoard />
-    </GameBoardProvider>
+    <GameInfoProvider>
+      <div className="flex">
+        <GameInfo />
+        <GameBoardProvider>
+          <GameBoard />
+        </GameBoardProvider>
+      </div>
+    </GameInfoProvider>
   );
 };
 

@@ -1,6 +1,7 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import { ICell, IShipPosition } from "./types";
 import { generateBoardCells } from "utils/boardCellGenerator";
+import { useGameInfoContext } from "components/GameInfo/GameInfoProvider";
 
 interface IGameBoardContext {
   boardCells: ICell[][],
@@ -20,6 +21,7 @@ type Props = {
 
 export const GameBoardProvider = ({children}: Props) => {
   const [boardCells, setBoardCells] = useState(generateBoardCells());
+  const { hitShip } = useGameInfoContext();
 
   const placeShipsOnBoardHandler = (shipsPositions: IShipPosition[]) => {
     shipsPositions.forEach(({ship, positions}) => {
@@ -38,6 +40,8 @@ export const GameBoardProvider = ({children}: Props) => {
       return;
     }
 
+
+    clickedCell.shipType && hitShip(clickedCell.shipType)
     clickedCell.isTicked = true;
 
     setBoardCells([...boardCells]);
