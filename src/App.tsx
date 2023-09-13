@@ -6,7 +6,7 @@ import { GameInfoProvider } from 'components/GameInfo/GameInfoProvider';
 const App = () => {
   return (
     <GameInfoProvider>
-      <div className="flex">
+      <div className="flex p-8 items-center justify-center">
         <GameInfo />
         <GameBoardProvider>
           <GameBoard />

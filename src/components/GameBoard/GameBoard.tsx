@@ -56,7 +56,7 @@ const GameBoard = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-10 border-4 w-fit h-fit">
+    <div className="grid grid-cols-10 border-4 border-orange-400 w-fit h-fit">
       {boardCells.map((row, rowIndex) =>
         row.map((cell: ICell, columnIndex: number) => (
           <GameBoardCell key={`${rowIndex}${columnIndex}`} rowIndex={rowIndex} cell={cell} columnIndex={columnIndex} />

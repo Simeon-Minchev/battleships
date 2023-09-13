@@ -13,7 +13,7 @@ const GameInfoShips = () => {
   } = useGameInfoContext();
 
   return (
-    <div>
+    <div className="p-4">
       <GameInfoShip image={carrierShape} totalHealth={shipsHealth.Carrier} health={ships.Carrier.health} />
       <GameInfoShip image={battleshipShape} totalHealth={shipsHealth.Battleship} health={ships.Battleship.health} />
       <GameInfoShip image={cruiserShape} totalHealth={shipsHealth.Cruiser} health={ships.Cruiser.health} />

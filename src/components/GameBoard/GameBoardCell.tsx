@@ -17,7 +17,7 @@ const GameBoardCell = ({rowIndex, columnIndex, cell}: Props) => {
   };
 
   return (
-    <div className="border cursor-pointer w-10 h-10" onClick={onCellClickHandler}>
+    <div className="border cursor-pointer w-16 h-16" onClick={onCellClickHandler}>
       {cell.isTicked && (cell.shipType ? <img src={hitShape} /> : <img src={missShape} />)}
     </div>
   );
